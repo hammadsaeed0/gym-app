@@ -30,7 +30,8 @@ input: {
     fontFamily: 'Roboto-Regular',
     fontSize: 17,
     backgroundColor: '#f1f4f8',
-    marginBottom: '3%'
+    marginBottom: '3%',
+    color: 'black'
     
     
     

@@ -1,11 +1,11 @@
-import { View, Text, Image, TextInput, TouchableOpacity  } from 'react-native'
+import { View, Text, Image, TextInput, TouchableOpacity, ScrollView  } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import style from './style'
 import React from 'react'
 
 const Login = () => {
   return (
-    <View style={style.container}>
+    <ScrollView style={style.container}>
         <View style={style.logoContainer}>
         <Image
         style={style.img}
@@ -17,12 +17,13 @@ const Login = () => {
         <TextInput
         placeholder='Phone / Email'
         style={style.input}
-  
+        placeholderTextColor= "gray"
+        
         />
         <TextInput
         placeholder='Password'
         style={style.input}
-  
+        placeholderTextColor= "gray"
         />
         
        
@@ -58,7 +59,7 @@ const Login = () => {
         </View>
         </View>
         
-    </View>
+    </ScrollView>
   )
 }
 
