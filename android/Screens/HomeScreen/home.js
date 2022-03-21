@@ -6,18 +6,16 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  FlatList,
-  BackHandler,
   Dimensions
 } from 'react-native';
 import Icon from 'react-native-dynamic-vector-icons';
 import LinearGradient from 'react-native-linear-gradient';
 import React from 'react';
 import style from './style';
-import { BackgroundImage } from 'react-native-elements/dist/config';
 const {width , height} = Dimensions.get('window')
-const home = () => {
+const Home = () => {
   return (
+    
     <ScrollView contentContainerStyle={style.container} style={{flex:1}}>
       <View style={style.header}>
         <View style={style.innerHeader}>
@@ -131,7 +129,7 @@ const home = () => {
             start={{x: 0, y: 0}}
             end={{x: 1, y: 0}}>
             <TouchableOpacity>
-              <Text style={style.headerText}>Sign In</Text>
+              <Text style={style.headerText}>Start Training</Text>
             </TouchableOpacity>
           </LinearGradient>
         </ImageBackground>
@@ -173,19 +171,19 @@ const home = () => {
         {/* 2nd Scrool View */}
         
       </View>
-      <View style={{width: '90%', height: height/100*40, alignSelf:'center', top: '10%', marginBottom: '50%'}}>
+      <View style={{width: '90%', height: height/100*40, alignSelf:'center', top: '10%', marginBottom: '20%'}}>
 
               <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
               <View style={{top:'2%'}}>
               <ImageBackground source={require('../../../Images/img1.jpeg')} style={style.tinyLogo} imageStyle={{ borderRadius: 10}} >
-              <Text style={{color:'black', fontSize: 23, top: '100%', left: '2%', fontFamily: 'Fredoka-Medium'}}>Rapid Lower Body</Text> 
+              <Text style={{color:'black', fontSize: 23, top: '100%', left: '2%', fontFamily: 'Fredoka-Regular'}}>Rapid Lower Body</Text> 
               <Text style={{color:'black', fontSize: 15, top: '100%', left: '2%', fontFamily: 'Fredoka-Medium', color:'#522ea9'}}>Beginner</Text> 
               </ImageBackground>
               
               </View>
               <View style={{top:'2%'}}>
               <ImageBackground source={require('../../../Images/img2.jpeg')} style={style.tinyLogo} imageStyle={{ borderRadius: 10}} >
-              <Text style={{color:'black', fontSize: 23, top: '100%', left: '2%', fontFamily: 'Fredoka-Medium'}}>BodyWeight Straight</Text> 
+              <Text style={{color:'black', fontSize: 23, top: '100%', left: '2%', fontFamily: 'Fredoka-Regular'}}>BodyWeight Straight</Text> 
               <Text style={{color:'black', fontSize: 15, top: '100%', left: '2%', fontFamily: 'Fredoka-Medium', color:'#522ea9'}}>Beginner</Text>
               </ImageBackground>
               </View><View style={{top:'2%'}}>
@@ -198,7 +196,8 @@ const home = () => {
       
 
     </ScrollView>
+    
   );
 };
 
-export default home;
+export default Home;
